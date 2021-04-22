@@ -1,0 +1,87 @@
+#homepage {
+  width: 90%;
+  height: 100vh;
+  background: url(../assets/home-background.svg) no-repeat;
+  background-position: 35vw 17vh;
+  margin: 0 auto;
+}
+
+header {
+  margin-top: 20px;
+}
+
+header, .signIn{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #460053;
+}
+
+header a img {
+  margin-right: 10px;
+}
+
+.logo {
+  width: 200px;
+}
+
+.signIn {
+  text-decoration: none;
+}
+
+main {
+  height: 80%;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-left: 40px;
+}
+
+main h1 {
+  color: #460053;
+  margin-bottom: 10px;
+  font-size: 40px;
+}
+
+main p {
+  font-size: large;
+  margin-bottom: 30px;
+}
+
+.searchButton {
+  width: 300px;
+  padding-right: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #00f47c;
+  border: 0px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bolder;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.searchButton:hover {
+  background-color: #00bc5f;
+  transform: scale(1.05);
+}
+
+a span {
+  padding: 20px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+}
+
+a span::after {
+  width: 20px;
+  height: 20px;
+  content: "";
+  background-image: url(../assets/search.svg);
+}

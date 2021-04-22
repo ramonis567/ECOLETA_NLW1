@@ -1,0 +1,168 @@
+* {
+ box-sizing: border-box;
+}
+
+#create-point {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+header {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 200px;
+}
+
+header a {
+  color: #460053;
+  text-decoration: none;
+  display: flex;
+}
+
+header a img {
+  margin-right: 10px;
+}
+
+form {
+  margin: 0 auto;
+  margin-top: 7vh;
+  max-width: 700px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 30px;
+}
+
+form h1 {
+  margin: 0;
+  color: #460053;
+  font-size: 30px;
+}
+
+form h2 {
+  margin: 0;
+  font-size: 25px;
+  color: #460053;
+}
+
+form fieldset {
+  margin-top: 40px;
+  border: 0;
+
+}
+
+form fieldset legend {
+  margin-bottom: 10px;
+}
+
+.field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.field-group {
+  display: flex;
+
+}
+
+form label {
+  font-size: 18px;
+  margin-bottom: 2px;
+}
+
+form input,select {
+  border: 0;
+  border-radius: 4px;
+  background-color: #e0e0e0;
+  padding: 12px 24px;
+  font-size: 16px;
+  outline-color: #00bc5f;
+}
+
+form select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/*  Aplicar margem a somente um field do field group */
+.field-group .field + .field {
+  margin-left: 15px;
+}
+
+form button {
+  margin-top: 10px;
+  width: 170px;
+  height: 40px;
+  background-color: #00bc5f;
+  border: 0;
+  border-radius: 4px;
+  color: white;
+  font-weight: bolder;
+  font-size: 15px;
+  transition: 1s;
+}
+
+form button:hover {
+  transform: scale(1.01);
+  background-color: #460053;
+}
+
+form button:focus {
+  background-color: #460053;
+  outline-color: #00bc5f;
+}
+
+form #itens {
+  margin-top: 10px;
+}
+
+form .itens-grid {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+form .list-item {
+  list-style: none;
+  height: 130px;
+  background-color: #e2ffeb;
+  border: 2px solid #f5f5f5;
+  border-radius: 5px;
+  padding: 20px 20px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #460053;
+  transition: 1s;
+}
+
+form .list-item:hover {
+  transform: scale(1.01);
+  border: 1px solid #460053;
+}
+
+form .list-item li span {
+  margin-top: 5px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.itens-grid li img,span {
+  pointer-events: none;
+} 
+
+.itens-grid li.selected {
+  background: #ededed;
+  border: 2px solid #00bc5f;
+}

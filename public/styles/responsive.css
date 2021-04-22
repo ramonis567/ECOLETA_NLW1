@@ -1,0 +1,38 @@
+@media (max-width: 900px) {
+  #homepage {
+    background-position: 70vw 17vh;
+  }
+
+  #homepage main {
+    width: 90%;
+    align-items: center;
+    text-align: center;
+  }
+
+  header a {
+    position: absolute;
+    bottom: 48px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  header img {
+    transform: translateX(50%);
+  }
+
+  #search-results-page .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  #search-results-page .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 1700px) {
+  #homepage {
+    background-position-x: 40vw;
+  }
+}
