@@ -17,7 +17,7 @@
   <div id="homepage">
     <header>
       <img src="/assets/logo.svg" alt="Logotipo Ecoleta" class="logo">
-      <a href="./create-point.html" class="signIn">
+      <a href="./create-point" class="signIn">
         <img src="/assets/log-in.svg" alt="Log-In Icon">
         <h3>Cadastre um ponto de coleta</h3>
       </a>
@@ -32,24 +32,9 @@
     </main>
   </div>
 
-  <!-- PopUp Window -->
-  <div id="modal" class="hide">
-    <div class="content">
-      <div class="header">
-        <h1>Pontos de Coleta</h1>
-        <a href="#">Fechar</a>
-      </div>
-      <form action="./search-results.html">
-        <label for="search">Cidade</label>
-        <div class="search field">
-          <input type="text" name="search" placeholder="Pesquise a cidade">
-          <button>
-            <img src="./assets/search.svg" alt="search button">
-          </button>
-        </div>
-      </form>
-    </div>
-  </div>
+  <!-- PopUp Window -- NUNJUCKS TEMPLATE ENGINE-->
+  {% include "partials/modal.html" %}
+
   <script src="./scripts/index.js"></script>
 </body>
 
