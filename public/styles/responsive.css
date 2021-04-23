@@ -9,14 +9,14 @@
     text-align: center;
   }
 
-  header a {
+  #homepage header a {
     position: absolute;
     bottom: 48px;
     left: 50%;
     transform: translateX(-50%);
   }
   
-  header img {
+  #homepage header img {
     transform: translateX(50%);
   }
 
@@ -28,6 +28,18 @@
 @media (max-width: 650px) {
   #search-results-page .cards {
     grid-template-columns: 1fr;
+  }
+
+  #create-point form legend {
+    display: block;
+  }
+
+  #create-point form .field-group {
+    flex-direction: column;
+  }
+
+  #create-point .field+.field {
+    margin-left: 0;
   }
 }
 

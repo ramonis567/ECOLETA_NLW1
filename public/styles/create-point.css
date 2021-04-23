@@ -108,6 +108,7 @@ form button {
   font-weight: bolder;
   font-size: 15px;
   transition: 1s;
+  margin-right: 15px;
 }
 
 form button:hover {
@@ -165,4 +166,24 @@ form .list-item li span {
 .itens-grid li.selected {
   background: #ededed;
   border: 2px solid #00bc5f;
+}
+
+form legend span {
+  font-size: 18px;
+  color: #505050;
+  margin-top: 4px;
+}
+
+form legend {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+form .button-align {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }

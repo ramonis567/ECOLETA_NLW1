@@ -1,40 +1,41 @@
-<!DOCTYPE html>
-<html lang="pt_br">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles/main.css">
+{% extends "layout.html" %}
+{% block styles %}
   <link rel="stylesheet" href="/styles/create-point.css">
-  <title>Ecoleta - Cadastro de Ponto de Coleta</title>
-</head>
+{% endblock styles %}
 
-<body>
+{% block title %}
+  <title>Ecoleta - Cadastro de Ponto de Coleta</title>
+{% endblock title %}
+
+{% set bodyId = create-point %}
+{% block content %} 
   <div id="create-point">
-    
     {% include "partials/header.html" %}
 
     <form action=""> 
       <h1>Cadastro de ponto de coleta</h1>
-
       <fieldset>
         <legend>
           <h2>Dados do coletor</h2>
         </legend>
-        <div class="field">
-          <label for="name">Nome da entidade</label>
-          <input type="text" name="name" required>
+        <div class="field-group">
+          <div class="field">
+            <label for="name">Nome da entidade</label>
+            <input type="text" name="name" required placeholder="Nome">
+          </div>
+          <div class="field">
+            <label for="image">Imagem (link)</label>
+            <input type="url" name="image" required placeholder="http://">
+          </div>
         </div>
         <div class="field-group">
           <div class="field">
             <label for="address">Endereço</label>
-            <input type="text" name="address" required>
+            <input type="text" name="address" required placeholder="Rua, Av., Alameda, Travessia, ...">
           </div>
           <div class="field">
-            <label for="complement">Número/Complemento</label>
-            <input type="text" name="complement" required>
+            <label for="complement">Complemento e Número</label>
+            <input type="text" name="complement" required placeholder="Casa nº, Ap. nº, Bloco, ...">
           </div>
         </div>
         <div class="field-group">
@@ -57,6 +58,7 @@
       <fieldset id="itens">
         <legend>
           <h2>Itens de coleta</h2>
+          <span>Selecione um ou mais itens</span>
         </legend>
         <div class="itens-grid">
           <li class="list-item" data-id="1">
@@ -88,12 +90,13 @@
         <input type="hidden" name="items">
       </fieldset>
       
-      <button type="submit">Cadastrar</button>
+      <div class="button-align">
+        <button type="submit">Cadastrar</button>
+      </div>
     </form>
-    
   </div>
-
+{% endblock content %}
+  
+{% block script %} 
   <script src="/scripts/create-point.js"></script>
-</body>
-
-</html>
+{% endblock script %}

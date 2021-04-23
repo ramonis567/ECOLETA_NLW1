@@ -1,18 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles/main.css">
+{% extends "layout.html" %}
+{% block styles %}
   <link rel="stylesheet" href="/styles/search-results.css">
-  <link rel="stylesheet" href="/styles/responsive.css">
+{% endblock styles %}
+
+{% block title %}
   <title>Ecoleta - Resultado da pesquisa</title>
-</head>
-<body>
+{% endblock title %}
+
+{% set bodyId = search-results-page %}
+{% block content %} 
   <div id="search-results-page">
-    
+      
     {% include "partials/header.html" %}
 
     <main>
@@ -41,5 +39,4 @@
       </div>
     </main>
   </div>
-</body>
-</html>
+{% endblock content %}
