@@ -22,14 +22,12 @@ app.get("/create-point", (req, res) => {
 });
 
 app.get("/search-results", (req, res) => {
-  db.all(`SELECT * FROM places`, function(err, rows){ // * = Todos os campos
+  data.all(`SELECT * FROM places`, function(err, rows){ // * = Todos os campos
     if(err) {
       return console.log(err); //finaliza função
     }
-    console.log("DADOS");
-    console.log(rows);
+    return res.render("search-results.html", { places: rows });
   });
-  return res.render("search-results.html");
 });
 
 app.listen(port);
