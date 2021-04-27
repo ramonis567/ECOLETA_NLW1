@@ -3,7 +3,7 @@ const db = new sqlite3.Database("./src/database/database.db");
 
 module.exports = db;
 
-/*
+
 db.serialize(() => {
 
   // ----------- CRIA TABELA NO DATABASE  ---------------
@@ -21,38 +21,38 @@ db.serialize(() => {
   `);
   
   // ----------  INSERÇÃO DE DADOS NA TABELA --------------
-  const query = `
-      INSERT INTO places (
-        name,
-        image,
-        address,
-        address2,
-        state,
-        city,
-        items
-      ) VALUES(
-        ?,
-        ?,
-        ?,
-        ?,
-        ?,
-        ?,
-        ?
-      );
-  `;
+  // const query = `
+  //     INSERT INTO places (
+  //       name,
+  //       image,
+  //       address,
+  //       address2,
+  //       state,
+  //       city,
+  //       items
+  //     ) VALUES(
+  //       ?,
+  //       ?,
+  //       ?,
+  //       ?,
+  //       ?,
+  //       ?,
+  //       ?
+  //     );
+  // `;
 
-  const values = [
-    "Papersider",
-    "https://images.unsplash.com/photo-1567393528677-d6adae7d4a0a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max",
-    "Guilherme Gemballa, Jardim América",
-    "Nº260",
-    "Santa Catarina",
-    "Rio do Sul",
-    "Papéis e Papelão"
-  ];
+  // const values = [
+  //   "Papersider",
+  //   "https://images.unsplash.com/photo-1567393528677-d6adae7d4a0a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max",
+  //   "Guilherme Gemballa, Jardim América",
+  //   "Nº260",
+  //   "Santa Catarina",
+  //   "Rio do Sul",
+  //   "Papéis e Papelão"
+  // ];
   // db.run(query, values, function(err) {
   //   if(err) {
-  //     return console.log(err); //finaliza função
+  //     return console.log(err); 
   //   }
   //   console.log("CADASTRO FEITO COM SUCESSO");
   //   console.log(this);
@@ -61,7 +61,7 @@ db.serialize(() => {
   // ------------ CONSULTA DE DADOS NA TABELA ---------------
   // db.all(`SELECT * FROM places`, function(err, rows){ // * = Todos os campos
   //   if(err) {
-  //     return console.log(err); //finaliza função
+  //     return console.log(err); 
   //   }
   //   console.log("DADOS");
   //   console.log(rows);
@@ -70,10 +70,8 @@ db.serialize(() => {
   // ------------- DELETAR DADOS DA TABELA -------------------
   // db.run(`DELETE FROM places WHERE id = ?`, [1], function(err){
   //   if(err) {
-  //     return console.log(err); //finaliza função
+  //     return console.log(err);
   //   }
   //   console.log("EXCLUSÃO FEITA COM SUCESSO");
   // });
 });
-
-*/

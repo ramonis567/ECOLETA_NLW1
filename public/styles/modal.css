@@ -76,3 +76,11 @@
 #modal form button:hover {
   background-color: #401060;
 }
+
+#modal .content2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  flex-direction: column;
+}
