@@ -47,7 +47,8 @@ app.post("/save-point", (req, res) => {
 
   data.run(query, values, function(err) {
     if(err) {
-      return console.log(err); 
+      console.log(err);
+      res.send("ERRO NO CADASTRO, TENTE NOVAMENTE!"); 
     }
     console.log("CADASTRO FEITO COM SUCESSO");
     console.log(this);
@@ -56,12 +57,19 @@ app.post("/save-point", (req, res) => {
 });
 
 app.get("/search-results", (req, res) => {
-  data.all(`SELECT * FROM places`, function(err, rows){ // * = Todos os campos
-    if(err) {
-      return console.log(err);
-    }
-    return res.render("search-results.html", { places: rows, total: rows.length });
-  });
+  const search = req.query.search;
+
+  if(search == ""){
+    return res.render("search-results.html", { total: 0 });
+  } else {
+    data.all(`SELECT * FROM places WHERE city LIKE '%${search}%'`, function(err, rows){ // * = Todos os campos
+      if(err) {
+        return console.log(err);
+      }
+      return res.render("search-results.html", { places: rows, total: rows.length });
+    });
+  }
+
 });
 
 app.listen(port);
